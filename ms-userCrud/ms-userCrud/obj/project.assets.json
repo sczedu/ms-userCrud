@@ -13594,23 +13594,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Eduardo\\.nuget\\packages\\": {},
+    "C:\\Users\\eduardo.scuzziato\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eduardo\\Desktop\\ms-crudUsers\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
+      "projectUniqueName": "C:\\Projects\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
       "projectName": "ms-userCrud",
-      "projectPath": "C:\\Users\\Eduardo\\Desktop\\ms-crudUsers\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
-      "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eduardo\\Desktop\\ms-crudUsers\\ms-userCrud\\ms-userCrud\\obj\\",
+      "projectPath": "C:\\Projects\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
+      "packagesPath": "C:\\Users\\eduardo.scuzziato\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\ms-userCrud\\ms-userCrud\\ms-userCrud\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\eduardo.scuzziato\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13618,6 +13618,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://nuget.ciashop.local/nuget": {},
+        "http://www.myget.org/F/ciashop": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

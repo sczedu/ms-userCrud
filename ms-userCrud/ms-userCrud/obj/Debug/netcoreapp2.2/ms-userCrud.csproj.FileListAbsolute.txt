@@ -11,3 +11,17 @@ C:\Users\Eduardo\Desktop\ms-crudUsers\ms-userCrud\ms-userCrud\obj\Debug\netcorea
 C:\Users\Eduardo\Desktop\ms-crudUsers\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.2\ms-userCrud.RazorTargetAssemblyInfo.cache
 C:\Users\Eduardo\Desktop\ms-crudUsers\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.2\ms-userCrud.dll
 C:\Users\Eduardo\Desktop\ms-crudUsers\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.2\ms-userCrud.pdb
+C:\Projects\ms-userCrud\ms-userCrud\ms-userCrud\bin\Debug\netcoreapp2.2\ms-userCrud.deps.json
+C:\Projects\ms-userCrud\ms-userCrud\ms-userCrud\bin\Debug\netcoreapp2.2\ms-userCrud.runtimeconfig.json
+C:\Projects\ms-userCrud\ms-userCrud\ms-userCrud\bin\Debug\netcoreapp2.2\ms-userCrud.runtimeconfig.dev.json
+C:\Projects\ms-userCrud\ms-userCrud\ms-userCrud\bin\Debug\netcoreapp2.2\ms-userCrud.dll
+C:\Projects\ms-userCrud\ms-userCrud\ms-userCrud\bin\Debug\netcoreapp2.2\ms-userCrud.pdb
+C:\Projects\ms-userCrud\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.2\ms-userCrud.csprojAssemblyReference.cache
+C:\Projects\ms-userCrud\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.2\ms-userCrud.csproj.CoreCompileInputs.cache
+C:\Projects\ms-userCrud\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.2\ms-userCrud.RazorAssemblyInfo.cache
+C:\Projects\ms-userCrud\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.2\ms-userCrud.RazorAssemblyInfo.cs
+C:\Projects\ms-userCrud\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.2\ms-userCrud.AssemblyInfoInputs.cache
+C:\Projects\ms-userCrud\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.2\ms-userCrud.AssemblyInfo.cs
+C:\Projects\ms-userCrud\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.2\ms-userCrud.RazorTargetAssemblyInfo.cache
+C:\Projects\ms-userCrud\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.2\ms-userCrud.dll
+C:\Projects\ms-userCrud\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.2\ms-userCrud.pdb

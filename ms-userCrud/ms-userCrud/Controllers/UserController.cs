@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using FluentValidation.Results;
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using ms_userCrud.Business;
 using ms_userCrud.Data;
@@ -28,6 +31,9 @@ namespace ms_userCrud.Controllers
         {
             try
             {
+                var resultValidator = new UserValidator().Validate(user);
+                if (!resultValidator.IsValid)
+                    ValidatorHandler(resultValidator);
                 var hashPassword = passwordBusiness.GetHash(user.Password);
                 var userDb = _context.User.FirstOrDefault(f => f.Username == user.Username && f.Password == hashPassword);
                 if (userDb == null)
@@ -48,7 +54,9 @@ namespace ms_userCrud.Controllers
             int idInsert;
             try
             {
-                new UserValidator().Validate(user);
+                var resultValidator = new UserValidator().Validate(user);
+                if (!resultValidator.IsValid)
+                    ValidatorHandler(resultValidator);
                 user.Password = passwordBusiness.GetHash(user.Password);
                 _context.User.Add(user);
                 idInsert = _context.SaveChanges();
@@ -147,5 +155,13 @@ namespace ms_userCrud.Controllers
             }
         }
 
+        private void ValidatorHandler(ValidationResult results)
+        {
+            if (!results.IsValid)
+            {
+                var failure =  results.Errors.FirstOrDefault();
+                throw new Exception("Property " + failure.PropertyName + " failed validation. Error was: " + failure.ErrorMessage);
+            }
+        }
     }
 }
