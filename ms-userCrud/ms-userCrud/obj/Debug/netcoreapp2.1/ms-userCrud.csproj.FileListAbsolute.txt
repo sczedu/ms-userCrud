@@ -1,0 +1,7 @@
+C:\Users\Eduardo\Desktop\ms-crudUsers\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.1\ms-userCrud.csprojAssemblyReference.cache
+C:\Users\Eduardo\Desktop\ms-crudUsers\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.1\ms-userCrud.csproj.CoreCompileInputs.cache
+C:\Users\Eduardo\Desktop\ms-crudUsers\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.1\ms-userCrud.RazorAssemblyInfo.cache
+C:\Users\Eduardo\Desktop\ms-crudUsers\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.1\ms-userCrud.RazorAssemblyInfo.cs
+C:\Users\Eduardo\Desktop\ms-crudUsers\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\Eduardo\Desktop\ms-crudUsers\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.1\ms-userCrud.AssemblyInfoInputs.cache
+C:\Users\Eduardo\Desktop\ms-crudUsers\ms-userCrud\ms-userCrud\obj\Debug\netcoreapp2.1\ms-userCrud.AssemblyInfo.cs
