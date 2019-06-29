@@ -32,13 +32,14 @@ namespace ms_userCrud
 
         public void ConfigureServices(IServiceCollection services)
         {
+            //DbConfiguration
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<MysqlDBContext>(opt => opt.UseInMemoryDatabase("DataUserMemory"));
             services.AddScoped<PasswordService>();
 
+            //tokenGeneration
             var signingConfigurations = new SigningConfigurations();
             services.AddSingleton(signingConfigurations);
-
             var tokenConfigurations = new TokenConfigurations();
             new ConfigureFromConfigurationOptions<TokenConfigurations>(
                 Configuration.GetSection("TokenConfigurations"))

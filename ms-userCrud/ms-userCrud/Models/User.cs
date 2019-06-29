@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace ms_userCrud.Models
 {
-    public class User
+    public class User : UserId
     {
-        public int Id { get; set; }
         public string Username { get; set; }
         public string Document { get; set; }
         public string Name { get; set; }

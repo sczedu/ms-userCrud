@@ -7,6 +7,7 @@ using ms_userCrud.Business;
 using ms_userCrud.Data;
 using ms_userCrud.Models;
 using ms_userCrud.Models.Vallidator;
+using ms_userCrud.Security.SecurityClasses;
 using System;
 using System.Linq;
 
@@ -29,22 +30,24 @@ namespace ms_userCrud.Controllers
         [HttpPost("Authenticate")]
         public IActionResult Authentication([FromBody]User user, [FromServices]PasswordService passwordBusiness)
         {
+            Token token = new Token();
             try
             {
-                var resultValidator = new UserValidator().Validate(user);
+                var resultValidator = new UserAuthValidator().Validate(user);
                 if (!resultValidator.IsValid)
                     ValidatorHandler(resultValidator);
                 var hashPassword = passwordBusiness.GetHash(user.Password);
                 var userDb = _context.User.FirstOrDefault(f => f.Username == user.Username && f.Password == hashPassword);
                 if (userDb == null)
-                    return NotFound();
+                    return new NotFoundResult();
+                token = passwordBusiness.GenerateToken(user);
             }
             catch (Exception e)
             {
                 return BadRequest(e);
             }
 
-            return new OkObjectResult(passwordBusiness.GenerateToken(user));
+            return new OkObjectResult(token);
         }
 
         [AllowAnonymous]
@@ -76,7 +79,10 @@ namespace ms_userCrud.Controllers
             {
                 var oldUser = _context.User.FirstOrDefault(f => f.Id == id);
                 if (oldUser == null)
-                    return NotFound();
+                    return new NotFoundResult();
+                var resultValidator = new UserValidator().Validate(user);
+                if (!resultValidator.IsValid)
+                    ValidatorHandler(resultValidator);
                 if (oldUser.Password != user.Password)
                     oldUser.Password = passwordBusiness.GetHash(user.Password);
                 oldUser.Document = user.Document;
@@ -94,7 +100,7 @@ namespace ms_userCrud.Controllers
                 return BadRequest(e);
             }
 
-            return new ObjectResult(user);
+            return new OkObjectResult(user);
         }
 
         [HttpDelete("{id}")]
@@ -104,7 +110,7 @@ namespace ms_userCrud.Controllers
             {
                 var userDb = _context.User.FirstOrDefault(f => f.Id == id);
                 if (userDb == null)
-                    return NotFound();
+                    return new NotFoundResult();
 
                 _context.User.Remove(userDb);
                 _context.SaveChanges();
@@ -126,7 +132,7 @@ namespace ms_userCrud.Controllers
         {
             try
             {
-                return new ObjectResult(_context.User.ToList());
+                return new OkObjectResult(_context.User.ToList());
             }
             catch (Exception e)
             {
@@ -141,9 +147,9 @@ namespace ms_userCrud.Controllers
             {
                 var result = _context.User.FirstOrDefault(f => f.Id == id);
                 if (result == null)
-                    return NotFound();
+                    return new NotFoundResult();
 
-                return new ObjectResult(result);
+                return new OkObjectResult(result);
             }
             catch (ArgumentException ex)
             {
