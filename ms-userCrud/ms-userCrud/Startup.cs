@@ -1,23 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-using ms_userCrud.Business;
-using ms_userCrud.Data;
-using ms_userCrud.Security;
-using ms_userCrud.Security.SecurityClasses;
+using ms_userCrud._01Api.Model;
+using ms_userCrud._01Api.Validator;
+using ms_userCrud._02Service;
+using ms_userCrud._02Service.Security;
+using ms_userCrud._03Data;
+using ms_userCrud._03Data.Entity;
+using ms_userCrud._05Helper;
+using System;
 
 namespace ms_userCrud
 {
@@ -34,8 +29,15 @@ namespace ms_userCrud
         {
             //DbConfiguration
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddDbContext<MysqlDBContext>(opt => opt.UseInMemoryDatabase("DataUserMemory"));
-            services.AddScoped<PasswordService>();
+            services.AddDbContext<DBContext>(opt => opt.UseInMemoryDatabase("DataUserMemory"));
+            services.AddScoped<IUserService, UserService>();
+
+            services.AddScoped<IAuthHelper, AuthHelper>();
+            services.AddScoped<UserAuthValidator, UserAuthValidator>();
+            services.AddScoped<IHelper, Helper>();
+            services.AddScoped<IUserContext<UserDTO>, UserContext<UserDTO>>();
+            services.AddScoped<UserValidator, UserValidator>();
+            services.AddScoped<DBContext, DBContext>();
 
             //tokenGeneration
             var signingConfigurations = new SigningConfigurations();
@@ -54,11 +56,11 @@ namespace ms_userCrud
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            
+            Environment.SetEnvironmentVariable("CryptographyKey", "CryptographySecretKeyValue");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                Environment.SetEnvironmentVariable("CryptographyKey", "CryptographySecretKeyValue");
+
             }
             else
             {

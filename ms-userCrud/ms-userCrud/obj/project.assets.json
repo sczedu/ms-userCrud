@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "AutoMapper/8.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
       "CryptoHelper/3.0.2": {
         "type": "package",
         "dependencies": {
@@ -5005,6 +5018,23 @@
     }
   },
   "libraries": {
+    "AutoMapper/8.1.1": {
+      "sha512": "GKBliBukkLG0z/U0T4Jy+yEpr5bKDImQ9nEy/T8jqNulwNkWDjiEWa9TL4yCxIhleDbmVmw2xYSaJ3Eb2OcSUg==",
+      "type": "package",
+      "path": "automapper/8.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automapper.8.1.1.nupkg.sha512",
+        "automapper.nuspec",
+        "lib/net461/AutoMapper.dll",
+        "lib/net461/AutoMapper.pdb",
+        "lib/net461/AutoMapper.xml",
+        "lib/netstandard2.0/AutoMapper.dll",
+        "lib/netstandard2.0/AutoMapper.pdb",
+        "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
     "CryptoHelper/3.0.2": {
       "sha512": "6xFZdEnhuOmX58TgZAeb20MbddsL8/nR/4CnWhmjMXv9gfpOxD+1bBU7IDtYq2Q8rZJUT6xYWdhW16bKriU2Mw==",
       "type": "package",
@@ -13581,6 +13611,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "AutoMapper >= 8.1.1",
       "FluentValidation >= 8.4.0",
       "JWT >= 5.2.1",
       "Microsoft.AspNetCore.App >= 2.2.0",
@@ -13600,11 +13631,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eduardo\\Desktop\\ms-crudUsers\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
+      "projectUniqueName": "C:\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
       "projectName": "ms-userCrud",
-      "projectPath": "C:\\Users\\Eduardo\\Desktop\\ms-crudUsers\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
+      "projectPath": "C:\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
       "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eduardo\\Desktop\\ms-crudUsers\\ms-userCrud\\ms-userCrud\\ms-userCrud\\obj\\",
+      "outputPath": "C:\\ms-userCrud\\ms-userCrud\\ms-userCrud\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13634,6 +13665,10 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[8.1.1, )"
+          },
           "FluentValidation": {
             "target": "Package",
             "version": "[8.4.0, )"

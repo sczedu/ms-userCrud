@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "fe0ba5c55e174bb549d144e7d7bf36c5e3c33180"
+    "signature": "5465d57103af0aa502ca403d72522823d86187eb"
   },
   "compilationOptions": {
     "defines": [
@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v2.2": {
       "ms-userCrud/1.0.0": {
         "dependencies": {
+          "AutoMapper": "8.1.1",
           "FluentValidation": "8.4.0",
           "JWT": "5.2.1",
           "Microsoft.AspNetCore.App": "2.2.0",
@@ -40,6 +41,21 @@
         },
         "compile": {
           "ms-userCrud.dll": {}
+        }
+      },
+      "AutoMapper/8.1.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "8.1.1.0",
+            "fileVersion": "8.1.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
       "CryptoHelper/3.0.2": {
@@ -3818,6 +3834,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AutoMapper/8.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GKBliBukkLG0z/U0T4Jy+yEpr5bKDImQ9nEy/T8jqNulwNkWDjiEWa9TL4yCxIhleDbmVmw2xYSaJ3Eb2OcSUg==",
+      "path": "automapper/8.1.1",
+      "hashPath": "automapper.8.1.1.nupkg.sha512"
     },
     "CryptoHelper/3.0.2": {
       "type": "package",
