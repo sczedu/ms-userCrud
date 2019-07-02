@@ -50,7 +50,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestAuthenticate_OK()
+        public void TestAuthenticate_OK()
         {
 
             _userService.InsertUser(GetUser01());
@@ -60,7 +60,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestAuthenticate_NOTFOUND()
+        public void TestAuthenticate_NOTFOUND()
         {
 
             _userService.InsertUser(GetUser01());
@@ -72,7 +72,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestUserCreate_OK()
+        public void TestUserCreate_OK()
         {
 
             var response = _userService.InsertUser(GetUser01());
@@ -81,7 +81,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestUserCreate_ERROR()
+        public void TestUserCreate_ERROR()
         {
             var user = GetUser01();
             user.Username = null;
@@ -90,7 +90,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestUpdate_OK()
+        public void TestUpdate_OK()
         {
 
             var idResult = _userService.InsertUser(GetUser01());
@@ -103,7 +103,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestUpdate_ERROR()
+        public void TestUpdate_ERROR()
         {
 
             var idResult = _userService.InsertUser(GetUser01());
@@ -116,7 +116,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestUpdate_InvalidEmail()
+        public void TestUpdate_InvalidEmail()
         {
 
             var idResult = _userService.InsertUser(GetUser01());
@@ -127,7 +127,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestDelete_OK()
+        public void TestDelete_OK()
         {
 
             var idResult = _userService.InsertUser(GetUser01());
@@ -137,7 +137,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestDelete_ERROR()
+        public void TestDelete_ERROR()
         {
 
             var idResult = _userService.InsertUser(GetUser01());
@@ -147,18 +147,17 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestList_OK()
+        public void TestList_OK()
         {
-            _userService.InsertUser(GetUser01());
             _userService.InsertUser(GetUser01());
 
             var response = _userService.List();
 
-            Assert.True(response.Count == 2);
+            Assert.Equal(GetUser01().Username, response[0].Username);
         }
 
         [Fact]
-        public async Task TestUserById()
+        public void TestUserById()
         {
             var idResult = _userService.InsertUser(GetUser01());
             var response = _userService.GetById(idResult);

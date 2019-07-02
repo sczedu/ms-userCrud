@@ -11091,11 +11091,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj",
+      "projectUniqueName": "C:\\Users\\Eduardo\\Desktop\\ms-userCrud-master\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj",
       "projectName": "XUnitTestUserCrud",
-      "projectPath": "C:\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj",
+      "projectPath": "C:\\Users\\Eduardo\\Desktop\\ms-userCrud-master\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj",
       "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
-      "outputPath": "C:\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\obj\\",
+      "outputPath": "C:\\Users\\Eduardo\\Desktop\\ms-userCrud-master\\ms-userCrud\\XUnitTestUserCrud\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11114,8 +11114,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj": {
-              "projectPath": "C:\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj"
+            "C:\\Users\\Eduardo\\Desktop\\ms-userCrud-master\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj": {
+              "projectPath": "C:\\Users\\Eduardo\\Desktop\\ms-userCrud-master\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj"
             }
           }
         }
