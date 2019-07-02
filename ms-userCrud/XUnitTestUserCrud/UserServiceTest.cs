@@ -68,7 +68,7 @@ namespace XUnitTestUserCrud
             user.Username = "usererror";
             var response = _userService.Authentication(user);
 
-            Assert.Equal(response, null);
+            Assert.Null(response);
         }
 
         [Fact]

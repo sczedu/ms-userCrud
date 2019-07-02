@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj": {}
+    "C:\\git\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj": {
+    "C:\\git\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
+        "projectUniqueName": "C:\\git\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
         "projectName": "ms-userCrud",
-        "projectPath": "C:\\Projects\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
+        "projectPath": "C:\\git\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
         "packagesPath": "C:\\Users\\eduardo.scuzziato\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\ms-userCrud\\ms-userCrud\\ms-userCrud\\obj\\",
+        "outputPath": "C:\\git\\ms-userCrud\\ms-userCrud\\ms-userCrud\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +43,10 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[8.4.0, )"
@@ -97,14 +101,14 @@
         }
       }
     },
-    "C:\\Projects\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj": {
+    "C:\\git\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj",
+        "projectUniqueName": "C:\\git\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj",
         "projectName": "XUnitTestUserCrud",
-        "projectPath": "C:\\Projects\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj",
+        "projectPath": "C:\\git\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj",
         "packagesPath": "C:\\Users\\eduardo.scuzziato\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\obj\\",
+        "outputPath": "C:\\git\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -125,8 +129,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Projects\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj": {
-                "projectPath": "C:\\Projects\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj"
+              "C:\\git\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj": {
+                "projectPath": "C:\\git\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj"
               }
             }
           }
@@ -160,6 +164,26 @@
               "target": "Package",
               "version": "[2.2.4, )"
             },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[3.0.0-preview6.19304.6, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[5.5.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.0.1, )"
@@ -174,15 +198,25 @@
               "target": "Package",
               "version": "[4.12.0, )"
             },
+            "NBuilder": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[5.5.0, )"
+            },
             "xunit": {
               "target": "Package",
-              "version": "[2.4.0, )"
+              "version": "[2.4.1, )"
             },
             "xunit.extensibility.core": {
               "target": "Package",
               "version": "[2.4.1, )"
             },
             "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[2.4.1, )"
             }

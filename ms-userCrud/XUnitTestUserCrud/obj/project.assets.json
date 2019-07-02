@@ -11085,23 +11085,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Eduardo\\.nuget\\packages\\": {},
+    "C:\\Users\\eduardo.scuzziato\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eduardo\\Desktop\\ms-userCrud-master\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj",
+      "projectUniqueName": "C:\\git\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj",
       "projectName": "XUnitTestUserCrud",
-      "projectPath": "C:\\Users\\Eduardo\\Desktop\\ms-userCrud-master\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj",
-      "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eduardo\\Desktop\\ms-userCrud-master\\ms-userCrud\\XUnitTestUserCrud\\obj\\",
+      "projectPath": "C:\\git\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\XUnitTestUserCrud.csproj",
+      "packagesPath": "C:\\Users\\eduardo.scuzziato\\.nuget\\packages\\",
+      "outputPath": "C:\\git\\ms-userCrud\\ms-userCrud\\XUnitTestUserCrud\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\eduardo.scuzziato\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11109,13 +11109,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://nuget.ciashop.local/nuget": {},
+        "http://www.myget.org/F/ciashop": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\Eduardo\\Desktop\\ms-userCrud-master\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj": {
-              "projectPath": "C:\\Users\\Eduardo\\Desktop\\ms-userCrud-master\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj"
+            "C:\\git\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj": {
+              "projectPath": "C:\\git\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj"
             }
           }
         }

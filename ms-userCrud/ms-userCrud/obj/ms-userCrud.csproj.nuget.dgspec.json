@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj": {}
+    "C:\\git\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj": {
+    "C:\\git\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
+        "projectUniqueName": "C:\\git\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
         "projectName": "ms-userCrud",
-        "projectPath": "C:\\Projects\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
+        "projectPath": "C:\\git\\ms-userCrud\\ms-userCrud\\ms-userCrud\\ms-userCrud.csproj",
         "packagesPath": "C:\\Users\\eduardo.scuzziato\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\ms-userCrud\\ms-userCrud\\ms-userCrud\\obj\\",
+        "outputPath": "C:\\git\\ms-userCrud\\ms-userCrud\\ms-userCrud\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,6 +43,10 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[8.4.0, )"

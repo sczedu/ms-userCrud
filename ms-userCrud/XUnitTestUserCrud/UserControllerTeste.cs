@@ -27,7 +27,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestAuthenticate_OK()
+        public void TestAuthenticate_OK()
         {
             var newUser = Builder<User>.CreateNew().Build();
             var newToken = Builder<Token>.CreateNew().Build();
@@ -38,7 +38,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestAuthenticate_NOTFOUND()
+        public void TestAuthenticate_NOTFOUND()
         {
             var newUser = Builder<User>.CreateNew().Build();
             _serviceUser.Setup(s => s.InsertUser(It.IsAny<User>())).Returns(0);
@@ -48,7 +48,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestUserCreate_OK()
+        public void TestUserCreate_OK()
         {
 
             var newUser = Builder<User>.CreateNew().Build();
@@ -58,7 +58,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestUserCreate_ERROR()
+        public void TestUserCreate_ERROR()
         {
             var newUser = Builder<User>.CreateNew().Build();
             _serviceUser.Setup(s => s.InsertUser(It.IsAny<User>())).Returns(0);
@@ -68,7 +68,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestUpdate_OK()
+        public void TestUpdate_OK()
         {
 
             var newUser = Builder<User>.CreateNew().Build();
@@ -80,7 +80,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestUpdate_ERROR()
+        public void TestUpdate_ERROR()
         {
 
             var newUser = Builder<User>.CreateNew().Build();
@@ -91,7 +91,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestDelete_OK()
+        public void TestDelete_OK()
         {
             var newUser = Builder<User>.CreateNew().Build();
             _serviceUser.Setup(s => s.GetById(It.IsAny<int>())).Returns(newUser);
@@ -102,7 +102,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestDelete_ERROR()
+        public void TestDelete_ERROR()
         {
 
             var newUser = Builder<User>.CreateNew().Build();
@@ -114,7 +114,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestList_OK()
+        public void TestList_OK()
         {
 
             var newListUser = Builder<List<UserDTO>>.CreateNew().Build();
@@ -125,7 +125,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestUserById()
+        public void TestUserById()
         {
             var newUser = Builder<User>.CreateNew().Build();
             _serviceUser.Setup(s => s.GetById(It.IsAny<int>())).Returns(newUser);
@@ -135,7 +135,7 @@ namespace XUnitTestUserCrud
         }
 
         [Fact]
-        public async Task TestUserById_NotFound()
+        public void TestUserById_NotFound()
         {
             var newUser = Builder<User>.CreateNew().Build();
             _serviceUser.Setup(s => s.GetById(It.IsAny<int>())).Returns((User)null);
