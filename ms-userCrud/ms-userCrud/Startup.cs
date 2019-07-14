@@ -5,13 +5,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-using ms_userCrud._01Api.Model;
-using ms_userCrud._01Api.Validator;
-using ms_userCrud._02Service;
-using ms_userCrud._02Service.Security;
-using ms_userCrud._03Data;
-using ms_userCrud._03Data.Entity;
-using ms_userCrud._05Helper;
+using ms_userCrud.Api.Model;
+using ms_userCrud.Api.Validator;
+using ms_userCrud.Service;
+using ms_userCrud.Service.Security;
+using ms_userCrud.Data;
+using ms_userCrud.Data.Entity;
+using ms_userCrud.Helper;
 using System;
 
 namespace ms_userCrud
@@ -34,7 +34,7 @@ namespace ms_userCrud
 
             services.AddScoped<IAuthHelper, AuthHelper>();
             services.AddScoped<UserAuthValidator, UserAuthValidator>();
-            services.AddScoped<IHelper, Helper>();
+            services.AddScoped<IHelper, ms_userCrud.Helper.Helper>();
             services.AddScoped<IUserContext<UserDTO>, UserContext<UserDTO>>();
             services.AddScoped<UserValidator, UserValidator>();
             services.AddScoped<DBContext, DBContext>();

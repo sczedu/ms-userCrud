@@ -2,9 +2,9 @@ using AutoMapper;
 using FizzWare.NBuilder;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
-using ms_userCrud._01Api.Model;
-using ms_userCrud._02Service;
-using ms_userCrud._03Data.Entity;
+using ms_userCrud.Api.Model;
+using ms_userCrud.Service;
+using ms_userCrud.Data.Entity;
 using ms_userCrud.Controllers;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -33,7 +33,8 @@ namespace XUnitTestUserCrud
             var newToken = Builder<Token>.CreateNew().Build();
             _serviceUser.Setup(s => s.Authentication(It.IsAny<User>())).Returns(newToken);
             var result = _userController.Authentication(newUser) as OkObjectResult;
-            Assert.Equal(200, result.StatusCode);
+            var token = result.Value as Token;
+            Assert.NotNull(token?.AccessToken);
 
         }
 
@@ -41,18 +42,16 @@ namespace XUnitTestUserCrud
         public void TestAuthenticate_NOTFOUND()
         {
             var newUser = Builder<User>.CreateNew().Build();
-            _serviceUser.Setup(s => s.InsertUser(It.IsAny<User>())).Returns(0);
-            var result = _userController.InsertUser(newUser) as BadRequestResult;
-
-            Assert.Equal(400, result.StatusCode);
+            _serviceUser.Setup(s => s.Authentication(It.IsAny<User>())).Returns(null as Token);
+            var result = _userController.Authentication(newUser) as BadRequestResult;
+            Assert.Null(result);
         }
-
         [Fact]
         public void TestUserCreate_OK()
         {
 
             var newUser = Builder<User>.CreateNew().Build();
-            _serviceUser.Setup(s => s.InsertUser(It.IsAny<User>())).Returns(1);
+            _serviceUser.Setup(s => s.InsertUser(It.IsAny<User>())).Returns(newUser);
             var result = _userController.InsertUser(newUser) as CreatedResult;
             Assert.Equal(201, result.StatusCode);
         }
@@ -61,7 +60,7 @@ namespace XUnitTestUserCrud
         public void TestUserCreate_ERROR()
         {
             var newUser = Builder<User>.CreateNew().Build();
-            _serviceUser.Setup(s => s.InsertUser(It.IsAny<User>())).Returns(0);
+            _serviceUser.Setup(s => s.InsertUser(It.IsAny<User>())).Returns(null as User);
             var result = _userController.InsertUser(newUser) as BadRequestResult;
 
             Assert.Equal(400, result.StatusCode);

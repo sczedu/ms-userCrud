@@ -2,13 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
-using ms_userCrud._01Api.Model;
-using ms_userCrud._01Api.Validator;
-using ms_userCrud._02Service;
-using ms_userCrud._02Service.Security;
-using ms_userCrud._03Data;
-using ms_userCrud._03Data.Entity;
-using ms_userCrud._05Helper;
+using ms_userCrud.Api.Model;
+using ms_userCrud.Api.Validator;
+using ms_userCrud.Service;
+using ms_userCrud.Service.Security;
+using ms_userCrud.Data;
+using ms_userCrud.Data.Entity;
+using ms_userCrud.Helper;
 using ms_userCrud.Controllers;
 using System;
 using System.Collections.Generic;
@@ -77,7 +77,8 @@ namespace XUnitTestUserCrud
 
             var response = _userService.InsertUser(GetUser01());
 
-            Assert.Equal(1, response);
+            Assert.NotNull(response);
+            Assert.Equal(1, response.Id);
         }
 
         [Fact]
@@ -97,7 +98,7 @@ namespace XUnitTestUserCrud
             var userUpdated = GetUser01();
             userUpdated.Password = "Passchanged";
             userUpdated.Username = "UsernameChanged";
-            var response = _userService.UpdateUser((int)idResult, userUpdated);
+            var response = _userService.UpdateUser(1, userUpdated);
 
             Assert.NotNull(response);
         }
@@ -119,19 +120,19 @@ namespace XUnitTestUserCrud
         public void TestUpdate_InvalidEmail()
         {
 
-            var idResult = _userService.InsertUser(GetUser01());
+            var result = _userService.InsertUser(GetUser01());
             var userUpdated = GetUser01();
             userUpdated.Email = "email@123";
 
-            Assert.Throws<Exception>(() => _userService.UpdateUser(idResult, userUpdated));
+            Assert.Throws<Exception>(() => _userService.UpdateUser(result.Id, userUpdated));
         }
 
         [Fact]
         public void TestDelete_OK()
         {
 
-            var idResult = _userService.InsertUser(GetUser01());
-            var response = _userService.DeleteUser(idResult);
+            var result = _userService.InsertUser(GetUser01());
+            var response = _userService.DeleteUser(result.Id);
 
             Assert.Equal(1, response);
         }
@@ -159,8 +160,8 @@ namespace XUnitTestUserCrud
         [Fact]
         public void TestUserById()
         {
-            var idResult = _userService.InsertUser(GetUser01());
-            var response = _userService.GetById(idResult);
+            var result = _userService.InsertUser(GetUser01());
+            var response = _userService.GetById(result.Id);
 
             Assert.Equal(GetUser01().Username, response.Username);
         }
